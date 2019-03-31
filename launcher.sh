@@ -2,7 +2,7 @@
 
 app()
 {
-  find /Applications ~/Applications -type d -iregex ".*.app$" -prune | fzf --color=16 --reverse | sed "s/ /\\\\ /" | xargs open
+  find /Applications ~/Applications -type d -iregex ".*.app$" -prune | fzf +m --margin=1,2 --prompt='> ' --color=16 --reverse | sed "s/ /\\\\ /" | xargs open
 }
 
 
